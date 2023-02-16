@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background: #f1f1f1;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.header__inner {
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header__menu {
+  display: flex;
+  gap: 15px;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 50px);
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  background: #eaeaea;
+  padding: 25px;
+  border-radius: 10px;
+  gap: 10px;
+  width: 240px;
+}
+
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 50px);
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+  background: #eaeaea;
+  padding: 25px;
+  border-radius: 10px;
+  gap: 10px;
+  width: 240px;
+}
+
+.input {
+  height: 40px;
+  padding-left: 10px;
+}
+
+.input.error {
+  border: 3px solid red;
+}
+
+.button {
+  height: 40px;
+  margin-top: 30px;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.albums,
+.images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.image img {
+  width: 100%;
+}
+
+.image {
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+.image button {
+  background: none;
+  border: none;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  color: red;
+  cursor: pointer;
+}
+
+.image.active svg {
+  animation: scale 0.5s;
+}
+
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.album {
+  padding: 15px;
+  background: #eaeaea;
+  display: flex;
+  flex-direction: column;
+}
+
+.album h4 {
+  flex: 1;
+}
+
+h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
